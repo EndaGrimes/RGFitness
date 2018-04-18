@@ -4,15 +4,16 @@ if (!isLoggedIn()) {
 	$_SESSION['msg'] = "You must log in first";
 	header('location: login.php');
 }
+
 ?>
 <!DOCTYPE html>
- <html class="no-js"> 
+ <html class="no-js">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>RG Fitness</title>
 
- 
+
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="icon" href="images\RG_Fitness_logo.jpg" type="image/jpg" sizes="16x16">
@@ -20,8 +21,8 @@ if (!isLoggedIn()) {
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
-	
-	
+
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -32,51 +33,22 @@ if (!isLoggedIn()) {
 	<link rel="stylesheet" href="css/superfish.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slider.css">
-	<link rel="stylesheet" href="registration/slider.css">
-	
+
+
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
-	
+
+
 	</head>
 	<body>
 		<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.php">RG<span>Fitness</span></a></h1>
-						<!-- menu -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li class="active">
-									<a href="index.php">Home</a>
-								</li>
-								<li>
-									<a href="classes.php">Classes</a>
-									 
-								</li>
-								<li>
-									<a href="tutorials.php">Tutorials</a>
-								</li>
-								<li><a href="trainer.php">Trainers</a></li>
-								<li><a href="shop.php">Shop</a></li>
-								<li><a href="contact.php">Contact</a></li>
-								<li><a href="login.php">Login</a></li>
-								<li><a href="register.php">Register</a></li>
-								
-
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
+			<?php include 'header.php';?>
 		</div>
-		
-		
+
+
 		<!-- header -->
 		<div class="fh5co-parallax" style="background-image: url(images/home-deadlift.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
@@ -97,8 +69,8 @@ if (!isLoggedIn()) {
 		<?php if (isset($_SESSION['success'])) : ?>
 			<div class="error success" >
 				<h3>
-					<?php 
-						echo $_SESSION['success']; 
+					<?php
+						echo $_SESSION['success'];
 						unset($_SESSION['success']);
 					?>
 				</h3>
@@ -111,54 +83,117 @@ if (!isLoggedIn()) {
 			<div>
 				<?php  if (isset($_SESSION['user'])) : ?>
 					<strong><?php echo $_SESSION['user']['username']; ?></strong>
+					<a href="#tablinks" onclick="openCity(event, 'Bookings')">View Bookings</a>
 					<a href="login.php?logout='1'" style="color: red;">logout</a>
-				
+
 
 				<?php endif ?>
 			</div>
-			<div>
-				<?php  
-					$booking_id = strtoupper($_GET['booking_id']);
+			<style>
+			table, th, td {
+			    border: 1px solid black;
+			}
+			.tab button {
+			    background-color: inherit;
+			    float: left;
+			    border: none;
+			    outline: none;
+			    cursor: pointer;
+			    padding: 14px 16px;
+			    transition: 0.3s;
+			    font-size: 17px;
+			}
 
+			/* Change background color of buttons on hover */
+			.tab button:hover {
+			    background-color: #ddd;
+			}
 
-					$response = $Checkfront->get("booking/{$booking_id}");
+			/* Create an active/current tablink class */
+			.tab button.active {
+			    background-color: #ccc;
+			}
 
+			/* Style the tab content */
+			.tabcontent {
+			    display: none;
+			    padding: 6px 12px;
+			    border: 1px solid #ccc;
+			    border-top: none;
+			}
+			</style>
+			<div class="tab">
 
-					if (empty($response['booking'])) {
+				<div id="Bookings" class="tabcontent">
+					<h3>Bookings</h3>
+				<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "rgfitness";
 
-					    echo "Booking not found!";
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+				    die("Connection failed: " . $conn->connect_error);
+				}
+				if (!isset($_SESSION)) {
+				    session_start();
+				}
 
-					} else {
+				global $dbname;
+				$current_user  = $_SESSION['user']['username'];
 
-					    $booking_id = $response['booking']['booking_id'];
+				$sql = "SELECT username, date, time, pt FROM users, booking WHERE users.username ='$current_user' and users.user_id=booking.user_fk";
 
-					    $date   = $response['booking']['date'];
+				$result = $conn->query($sql);
 
-					    $time  = $response['booking']['time'];
+				if ($result->num_rows > 0) {
+				    echo "<table><tr><th>Username</th><th>Date</th><th>Time</th><th>Personal Trainer</th></tr>";
+				    // output data of each row
+				    while($row = $result->fetch_assoc()) {
+				        echo "<tr><td>" . $row["username"]. "</td><td>" . $row["date"]. "</td><td> " . $row["time"]. "</td><td>" . $row["pt"]. "</td></tr>";
+				    }
+				    echo "</table>";
+				} else {
+				    echo "0 results";
+				}
 
-					    $pt  = $response['booking']['PT'];
-
-					    echo "{$booking_id} dates for sessions are on '{$date}', at {$time} with {$pt}";
-
-					}
+				$conn->close();
 				?>
 			</div>
 		</div>
 	</div>
 
-		
+	<script>
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+	</script>
+
 		<?php include 'footer.php';?>
 
-	
+
 
 	</div>
 	<!-- END fh5co-page -->
 
 	</div>
 	<!-- END fh5co-wrapper -->
-	
+
 	<!-- jQuery -->
-	
+
 
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
@@ -176,11 +211,10 @@ if (!isLoggedIn()) {
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
-	
-	
+
+
 		<script src="js/slider.js"></script>
 
-	
+
 	</body>
 </html>
-
