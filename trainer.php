@@ -2,17 +2,17 @@
 include('functions.php');
 ?>
 <!DOCTYPE html>
-<html class="no-js"> 
+<html class="no-js">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>RG Fitness</title>
-	
+
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="icon" href="images\RG_Fitness_logo.jpg" type="image/jpg" sizes="16x16">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -27,7 +27,7 @@ include('functions.php');
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
+
 
 	</head>
 	<!-- Logo -->
@@ -48,7 +48,7 @@ include('functions.php');
 								</li>
 								<li>
 									<a href="classes.php" class="fh5co-sub-ddown">Classes</a>
-									 
+
 								</li>
 								<li>
 									<a href="tutorials.php">Tutorials</a>
@@ -62,7 +62,7 @@ include('functions.php');
 						</nav>
 					</div>
 				</div>
-			</header>		
+			</header>
 		</div>
 		<!-- end:fh5co-header -->
 		<div class="fh5co-parallax" style="background-image: url(images/Personal-Training.jpg);" data-stellar-background-ratio="0.5">
@@ -139,7 +139,7 @@ include('functions.php');
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-4.jpg);">
+						<div class="team-section-grid animate-box" style="background-image: url(images/john.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
 									<h3>John McElroy</h3>
@@ -155,7 +155,7 @@ include('functions.php');
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6">
-						<div class="team-section-grid animate-box" style="background-image: url(images/trainer-5.jpg);">
+						<div class="team-section-grid animate-box" style="background-image: url(images/elaine.jpg);">
 							<div class="overlay-section">
 								<div class="desc">
 									<h3>Elaine Kelly</h3>
@@ -170,7 +170,7 @@ include('functions.php');
 							</div>
 						</div>
 					</div>
-						
+
 				</div>
 			</div>
 		</div>
@@ -185,14 +185,14 @@ include('functions.php');
 						</div>
 					</div>
 				</div>
-				
+
 
 				</div>
 			</div>
 		</div>
-		
+
 		<?php include 'footer.php';?>
-		
+
 
 	</div>
 	<!-- END fh5co-page -->
@@ -221,4 +221,3 @@ include('functions.php');
 
 	</body>
 </html>
-
