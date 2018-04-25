@@ -2,17 +2,17 @@
 include('functions.php');
 ?>
 <!DOCTYPE html>
- <html class="no-js"> 
+ <html class="no-js">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>RG Fitness</title>
-	
+
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="icon" href="images\RG_Fitness_logo.jpg" type="image/jpg" sizes="16x16">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -27,10 +27,7 @@ include('functions.php');
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+
 
 	</head>
 	<!-- Logo -->
@@ -38,34 +35,7 @@ include('functions.php');
 	<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.php">RG<span>Fitness</span></a></h1>
-						<!-- Navigation -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li class="active">
-									<a href="index.php">Home</a>
-								</li>
-								<li>
-									<a href="classes.php" class="fh5co-sub-ddown">Classes</a>
-									 
-								</li>
-								<li>
-									<a href="tutorials.php">Tutorials</a>
-								</li>
-								<li><a href="trainer.php">Trainers</a></li>
-								<li><a href="shop.php">Shop</a></li>
-								<li><a href="contact.php">Contact</a></li>
-								<li><a href="login.php">Login</a></li>
-								<li><a href="register.php">Register</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
+				<?php include 'header.php';?>
 		</div>
 		<!-- end:fh5co-header -->
 		<div class="fh5co-parallax" style="background-image: url(images/drinking.jpg);" data-stellar-background-ratio="0.5">
@@ -110,7 +80,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-	
+
 				<figure>
 					<img src="images/whey.jpeg" alt="Whey Protein" height="300" width="153.48">
 					<h3>Whey Protein</h3>
@@ -135,7 +105,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-	
+
 				<figure>
 					<img src="images/reebok.jpg" alt="Whey Protein" height="300" width="153.48">
 					<h3>Boxing Gloves</h3>
@@ -162,7 +132,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-  
+
 				<figure>
 					<img src="images/jersey.jpg" alt="JERSEY" height="300" width="153.48">
 					<h3>RG Fitness Jerseys</h3>
@@ -189,7 +159,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-	
+
 				<figure>
 					<img src="images/bag.jpg" alt="Gym Bag" height="300" width="153.48">
 					<h3>Gym Bag</h3>
@@ -216,7 +186,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-	
+
 				<figure>
 					<img src="images/waterbottle.jpg" alt="Water Bottle" height="300" width="153.48">
 					<h3>Water Bottle</h3>
@@ -243,7 +213,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-  
+
 				<figure>
 					<img src="images/rope.jpg" alt="Skipping Rope" height="300" width="153.48">
 					<h3>Skipping Rope</h3>
@@ -269,8 +239,8 @@ include('functions.php');
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#SkippingRope">
 					View Product
 					</button>
-				</figure>	
-  
+				</figure>
+
 				<figure>
 					<img src="images/yoga.jpg" alt="Yoga Mat" height="300" width="153.48">
 					<h3>Yoga Mat</h3>
@@ -297,7 +267,7 @@ include('functions.php');
 					View Product
 					</button>
 				</figure>
-  
+
 				<figure>
 					<img src="images/gymball.jpg" alt="Gym Ball" height="300" width="153.48">
 					<h3>Gym Ball</h3>
@@ -323,9 +293,9 @@ include('functions.php');
 					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#GymBall">
 					View Product
 					</button>
-			</figure>	
+			</figure>
 			</div>
-		
+
 
 <!-- Resistance Bands Modal -->
 <div class="modal fade" id="ResistanceBands" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -338,7 +308,7 @@ include('functions.php');
         </button>
       </div>
       <div class="modal-body">
-        <p>A resistance band is an elastic band used for strength training. They are also commonly used in physical therapy, specifically 
+        <p>A resistance band is an elastic band used for strength training. They are also commonly used in physical therapy, specifically
 			by convalescents of muscular injuries, including cardiac rehab patients to allow slow rebuilding of strength. </P>
       </div>
       <div class="modal-footer">
@@ -421,7 +391,7 @@ include('functions.php');
         </button>
       </div>
       <div class="modal-body">
-        <p>The Gym Bag is perfect for your sports gear, featuring a zipped main section with added accessory pocket to the side, 
+        <p>The Gym Bag is perfect for your sports gear, featuring a zipped main section with added accessory pocket to the side,
 			finished of dual carry handles and adjustable shoulder strap. </p>
       </div>
       <div class="modal-footer">
@@ -462,7 +432,7 @@ include('functions.php');
         </button>
       </div>
       <div class="modal-body">
-        <p>This skipping rope has been designed with a 9ft nylon rope that is ideal for fitness and speed training. 
+        <p>This skipping rope has been designed with a 9ft nylon rope that is ideal for fitness and speed training.
 			This skipping rope also comes with slimline moulded plastic handles for ease of use. </P>
       </div>
       <div class="modal-footer">
@@ -511,16 +481,16 @@ include('functions.php');
     </div>
   </div>
 </div>
-					
-					
-					
-					
+
+
+
+
 		</div>
 		</div>
-	
-		
+
+
 		<?php include 'footer.php';?>
-	
+
 
 	</div>
 	<!-- END fh5co-page -->
@@ -549,4 +519,3 @@ include('functions.php');
 
 	</body>
 </html>
-
