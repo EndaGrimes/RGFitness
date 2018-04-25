@@ -2,13 +2,13 @@
 include('functions.php');
 ?>
 <!DOCTYPE html>
- <html class="no-js"> 
+ <html class="no-js">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>RG Fitness</title>
 
- 
+
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="icon" href="images\RG_Fitness_logo.jpg" type="image/jpg" sizes="16x16">
@@ -16,8 +16,8 @@ include('functions.php');
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 	<link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css'>
-	
-	
+
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -28,49 +28,18 @@ include('functions.php');
 	<link rel="stylesheet" href="css/superfish.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slider.css">
-	
+
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	
-	
 	</head>
+
 	<body>
 		<div id="fh5co-wrapper">
 		<div id="fh5co-page">
 		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container">
-					<div class="nav-header">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.php">RG<span>Fitness</span></a></h1>
-						<!-- Navigation -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li class="active">
-									<a href="index.php">Home</a>
-								</li>
-								<li>
-									<a href="classes.php" class="fh5co-sub-ddown">Classes</a>
-									 
-								</li>
-								<li>
-									<a href="tutorials.php">Tutorials</a>
-								</li>
-								<li><a href="trainer.php">Trainers</a></li>
-								<li><a href="shop.php">Shop</a></li>
-								<li><a href="contact.php">Contact</a></li>
-								<li><a href="login.php">Login</a></li>
-								<li><a href="register.php">Register</a></li>
-								
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</header>		
+			<?php include 'header.php';?>
 		</div>
-		
-		
 		<!-- header -->
 		<div class="fh5co-hero">
 			<div class="fh5co-overlay"></div>
@@ -78,7 +47,7 @@ include('functions.php');
 				<div class="desc animate-box">
 					<div class="container">
 						<div class="row">
-							
+
 						</div>
 					</div>
 				</div>
@@ -97,14 +66,10 @@ include('functions.php');
 						</div>
 					</div>
 				</div>
-				
-					
-
-						
 			</div>
 		</div>
-			
-		
+
+
 		<div class="fh5co-parallax" style="background-image: url(images/gym-homepage.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
@@ -118,8 +83,8 @@ include('functions.php');
 				</div>
 			</div>
 		</div>
-		<!-- end: fh5co-parallax -->
-		
+		<!-- end of train like a champion -->
+
 		<div id="fh5co-programs-section">
 			<div class="container">
 				<div class="row">
@@ -131,34 +96,22 @@ include('functions.php');
 							<img src="images\ONeills.jpg" alt="oneills logo" style="width="050" height="100";">
 							<br></br>
 							<img src="images\goldwhey.jpg" alt="oneills logo" style="width="050" height="100";">
-							
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
-		
-		<?php include 'footer.php';?>
-					
-					
-					
-					
-		
-		
-		
-		
-	
 
+		<?php include 'footer.php';?>
 	</div>
-	<!-- END fh5co-page -->
+	<!-- END of page -->
 
 	</div>
 	<!-- END fh5co-wrapper -->
-	
-	<!-- jQuery -->
-	
 
+
+
+	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
@@ -172,14 +125,9 @@ include('functions.php');
 	<!-- Superfish -->
 	<script src="js/hoverIntent.js"></script>
 	<script src="js/superfish.js"></script>
-
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
-	
-	
 		<script src="js/slider.js"></script>
 
-	
 	</body>
 </html>
-

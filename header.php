@@ -6,16 +6,9 @@
       <!-- Navigation -->
       <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu">
-          <li class="active">
-            <a href="index.php">Home</a>
-          </li>
-          <li>
-            <a href="classes.php" class="fh5co-sub-ddown">Classes</a>
-
-          </li>
-          <li>
-            <a href="tutorials.php">Tutorials</a>
-          </li>
+          <li class="active"><a href="index.php">Home</a></li>
+          <li><a href="classes.php" class="fh5co-sub-ddown">Classes</a></li>
+          <li><a href="tutorials.php">Tutorials</a></li>
           <li><a href="trainer.php">Trainers</a></li>
           <li><a href="shop.php">Shop</a></li>
           <li><a href="contact.php">Contact</a></li>

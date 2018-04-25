@@ -6,8 +6,8 @@
 					<div class="row">
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">About Us</h3>
-							<p>RG Fitness, thrives for the absoulate best out of all members. 
-								Our great team will provide suppost and motivation as well as the necessary resources you need to get fit. 
+							<p>RG Fitness, strives for the absolute best out of all members.
+								Our great team will provide support and motivation as well as the necessary resources you need to get fit.
 								You can sign up for various classes and personal training sessions with our fantastic trainers. </p>
 						</div>
 
@@ -18,14 +18,11 @@
 								<li class="menu__link menu__link--level-1"><a href="terms.php">Terms &amp; Conditions</a></li>
 								<li class="menu__link menu__link--level-1"><a href="cookie.php">Cookie Policy</a></li>
 								<li class="menu__link menu__link--level-1"><a href="privacy.php">Privacy Policy</a></li>
-								
+
 									<?php  if (isset($_SESSION['user'])) : ?>
 										<li><a href="Welcome.php"><?php echo $_SESSION['user']['username']; ?></a></li>
 										<li><a href="login.php?logout='1'" style="color: red;">logout</a></li>
-										
-
 									<?php endif ?>
-								
 							</ul>
 						</div>
 						<div class="col-md-4 animate-box">
