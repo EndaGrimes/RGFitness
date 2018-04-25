@@ -40,7 +40,7 @@ include('functions.php');
 		<div id="fh5co-header">
 			<?php include 'header.php';?>
 		</div>
-		<!-- end:fh5co-header -->
+		<!-- end -header -->
 		<div class="fh5co-parallax" style="background-image: url(images/home-deadlift.jpg);" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
 			<div class="container">
